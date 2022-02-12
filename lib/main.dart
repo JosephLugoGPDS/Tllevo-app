@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:tllevo/presentation/controllers/shrinkdrawer_controller.dart';
+
+import 'package:tllevo/presentation/pages/home_page.dart';
 
 void main() {
   runApp(TllevoApp());
@@ -9,8 +13,14 @@ class TllevoApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Container(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<ShrinkDrawerController>(create: (_) => ShrinkDrawerController()),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: const HomePage()
+      ),
     );
   }
 }
