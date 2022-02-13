@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 import 'package:tllevo/core/theme/colors_app.dart';
 import 'package:tllevo/core/values/dimension.dart';
+import 'package:tllevo/presentation/widgets/drawer/shrinkdrawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage();
@@ -9,6 +11,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const ShrinkDrawer(),
       appBar: AppBar(
         backgroundColor: primaryColor,
         elevation: 0,
