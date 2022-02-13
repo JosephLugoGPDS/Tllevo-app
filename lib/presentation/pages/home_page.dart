@@ -6,6 +6,7 @@ import 'package:tllevo/core/values/dimension.dart';
 import 'package:tllevo/core/values/strings_app.dart';
 import 'package:tllevo/presentation/pages/widgets/auth_card.dart';
 import 'package:tllevo/presentation/pages/widgets/categories_horizontal.dart';
+import 'package:tllevo/presentation/pages/widgets/news_section.dart';
 import 'package:tllevo/presentation/pages/widgets/primary_offerts_cards.dart';
 import 'package:tllevo/presentation/pages/widgets/products_gridview.dart';
 import 'package:tllevo/presentation/pages/widgets/title_section.dart';
@@ -51,6 +52,11 @@ class HomePage extends StatelessWidget {
               const TitleSection('Te mereces todo esto'),
               const ProductsGridView(),
               const TitleSection('Novedades'),
+              const NewsSection(
+                'It is a long established fact that a reader will be distracted by',
+                'assets/news.png',
+                color: whiteColor,
+              )
             ],
           ),
         ],
