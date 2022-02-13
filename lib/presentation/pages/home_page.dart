@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'package:tllevo/core/style/text_style_app.dart';
 import 'package:tllevo/core/theme/colors_app.dart';
 import 'package:tllevo/core/values/dimension.dart';
 import 'package:tllevo/core/values/strings_app.dart';
 import 'package:tllevo/presentation/pages/widgets/auth_card.dart';
 import 'package:tllevo/presentation/pages/widgets/categories_horizontal.dart';
 import 'package:tllevo/presentation/pages/widgets/primary_offerts_cards.dart';
+import 'package:tllevo/presentation/pages/widgets/products_gridview.dart';
+import 'package:tllevo/presentation/pages/widgets/see_more.dart';
 import 'package:tllevo/presentation/widgets/drawer/shrinkdrawer.dart';
 import 'package:tllevo/presentation/widgets/search_field.dart';
 
@@ -46,6 +49,24 @@ class HomePage extends StatelessWidget {
               const PrimaryOffertsCards(),
               const CategoriesHorizontal(),
               const AuthCard(),
+              Container(
+                margin:
+                    const EdgeInsets.symmetric(horizontal: MARGIN_SIZE_DEFAULT),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        'Te mereces todo esto',
+                        style: TextStyleApp.h2().copyWith(
+                          color: textColor,
+                        ),
+                      ),
+                    ),
+                    const SeeMore()
+                  ],
+                ),
+              ),
+              const ProductsGridView()
             ],
           ),
         ],
