@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:tllevo/core/theme/colors_app.dart';
 import 'package:tllevo/core/values/dimension.dart';
 import 'package:tllevo/core/values/strings_app.dart';
+import 'package:tllevo/presentation/pages/widgets/categories_horizontal.dart';
 import 'package:tllevo/presentation/pages/widgets/primary_offerts_cards.dart';
 import 'package:tllevo/presentation/widgets/drawer/shrinkdrawer.dart';
 import 'package:tllevo/presentation/widgets/search_field.dart';
@@ -33,9 +34,11 @@ class HomePage extends StatelessWidget {
             color: primaryColor,
           ),
           ListView(
+            physics: const BouncingScrollPhysics(),
             children: [
               SearchField(StringsApp.searchTheProductyouWant()),
-              const PrimaryOffertsCards()
+              const PrimaryOffertsCards(),
+              const CategoriesHorizontal()
             ],
           ),
         ],
