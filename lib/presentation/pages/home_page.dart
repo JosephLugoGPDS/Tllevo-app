@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:tllevo/core/theme/colors_app.dart';
 import 'package:tllevo/core/values/dimension.dart';
 import 'package:tllevo/core/values/strings_app.dart';
+import 'package:tllevo/presentation/pages/widgets/auth_card.dart';
 import 'package:tllevo/presentation/pages/widgets/categories_horizontal.dart';
 import 'package:tllevo/presentation/pages/widgets/primary_offerts_cards.dart';
 import 'package:tllevo/presentation/widgets/drawer/shrinkdrawer.dart';
@@ -23,14 +24,19 @@ class HomePage extends StatelessWidget {
         systemOverlayStyle: SystemUiOverlayStyle(statusBarColor: primaryColor),
         title: Image.asset('assets/brand.png'),
         actions: [
-          IconButton(onPressed: () => null, icon: const Icon(Icons.notifications_sharp, size: ICON_SIZE_DEFAULT)),
-          IconButton(onPressed: () => null, icon: const Icon(Icons.favorite, size: ICON_SIZE_DEFAULT))
+          IconButton(
+              onPressed: () => null,
+              icon: const Icon(Icons.notifications_sharp,
+                  size: ICON_SIZE_DEFAULT)),
+          IconButton(
+              onPressed: () => null,
+              icon: const Icon(Icons.favorite, size: ICON_SIZE_DEFAULT))
         ],
       ),
       body: Stack(
         children: [
           Container(
-            height: MediaQuery.of(context).size.height*0.2,
+            height: MediaQuery.of(context).size.height * 0.2,
             color: primaryColor,
           ),
           ListView(
@@ -38,7 +44,8 @@ class HomePage extends StatelessWidget {
             children: [
               SearchField(StringsApp.searchTheProductyouWant()),
               const PrimaryOffertsCards(),
-              const CategoriesHorizontal()
+              const CategoriesHorizontal(),
+              const AuthCard(),
             ],
           ),
         ],
