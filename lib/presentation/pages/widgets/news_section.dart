@@ -40,7 +40,7 @@ class NewsSection extends StatelessWidget {
                         )
                       ),
                     ),
-                    CustomOutlineButton(color: whiteColor)
+                    CustomOutlineButton(color: color)
                   ],
                 ),
               ),
