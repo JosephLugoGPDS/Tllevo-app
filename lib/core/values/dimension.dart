@@ -5,11 +5,16 @@ const double MARGIN_SIZE_MEDIUM = 20;
 const double MARGIN_SIZE_LARGE = 22;
 const double MARGIN_SIZE_XXLL = 60;
 
+const double PADDING_SIZE_SMALL = 10;
 const double PADDING_SIZE_DEFAULT = 15;
 const double PADDING_SIZE_MEDIUM = 20;
 const double PADDING_SIZE_LARGE = 22;
 const double PADDING_SIZE_XXLL = 60;
 
 const double ICON_SIZE_DEFAULT = 30;
+const double ICON_SIZE_MEDIUM = 40;
+const double ICON_SIZE_LARGE = 50;
 const double ICON_SIZE_SMALL = 25;
+
+const double RADIUS_SIZE_SMALL = 5;
 
