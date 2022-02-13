@@ -3,7 +3,9 @@ import 'package:flutter/services.dart';
 
 import 'package:tllevo/core/theme/colors_app.dart';
 import 'package:tllevo/core/values/dimension.dart';
+import 'package:tllevo/core/values/strings_app.dart';
 import 'package:tllevo/presentation/widgets/drawer/shrinkdrawer.dart';
+import 'package:tllevo/presentation/widgets/search_field.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage();
@@ -23,8 +25,18 @@ class HomePage extends StatelessWidget {
           IconButton(onPressed: () => null, icon: const Icon(Icons.favorite, size: ICON_SIZE_DEFAULT))
         ],
       ),
-      body: Container(
-        height: double.maxFinite
+      body: Stack(
+        children: [
+          Container(
+            height: MediaQuery.of(context).size.height*0.2,
+            color: primaryColor,
+          ),
+          ListView(
+            children: [
+              SearchField(StringsApp.searchTheProductyouWant())
+            ],
+          )
+        ],
       ),
     );
   }
