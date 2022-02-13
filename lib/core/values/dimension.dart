@@ -1,3 +1,5 @@
+const double MARGIN_SIZE_EXTRA_SMALL = 6;
+const double MARGIN_SIZE_SMALL = 12;
 const double MARGIN_SIZE_DEFAULT = 18;
 const double MARGIN_SIZE_MEDIUM = 20;
 const double MARGIN_SIZE_LARGE = 22;
