@@ -3,6 +3,16 @@ import 'package:tllevo/core/values/strings_app.dart';
 
 import 'package:tllevo/data/entities/shrinkdrawer_item.dart';
 
+Map<int, String> categoryMap = {
+  0 : StringsApp.allCategories(),
+  1 : StringsApp.videoPlayer(),
+  2 : StringsApp.moda(),
+  3 : StringsApp.computing(),
+  4 : StringsApp.audio(),
+  5 : StringsApp.tv(),
+};
+
+
 Map<int, ShrinkDrawerItem> drawerMap = {
   0: ShrinkDrawerItem(
     Icons.home_outlined,
