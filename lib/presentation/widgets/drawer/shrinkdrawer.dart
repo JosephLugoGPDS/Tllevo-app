@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'package:tllevo/core/theme/colors_app.dart';
-import 'package:tllevo/core/values/dimension.dart';
 import 'package:tllevo/data/local/dictionaries.dart';
 import 'package:tllevo/presentation/controllers/shrinkdrawer_controller.dart';
+import 'package:tllevo/presentation/widgets/cards/header_drawer_card.dart';
 import 'package:tllevo/presentation/widgets/drawer/shrinkdrawer_tile.dart';
 
 class ShrinkDrawer extends StatelessWidget {
@@ -19,8 +19,12 @@ class ShrinkDrawer extends StatelessWidget {
           color: whiteColor,
           child: Column(
             children: [
-              const SizedBox(height: MARGIN_SIZE_DEFAULT),
-              const Divider(),
+              Column(
+                children: [
+                  const HeaderDrawerCard(),
+                  const Divider(color: greyColor, height: 2),
+                ],
+              ),
               Consumer<ShrinkDrawerController>(
                 builder: (context, controller, _) {
                   return Expanded(
@@ -35,6 +39,7 @@ class ShrinkDrawer extends StatelessWidget {
                               isActive: controller.currentIndex == key,
                               leadingIcon: drawerMap[key]!.icon,
                               handleActive: () => controller.handleActive(index),
+                              isTopDivider: index == 7 || index == 8 || index == 11,
                             ),
                           ],
                         );
