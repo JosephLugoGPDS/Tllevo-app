@@ -38,34 +38,42 @@ class HomePage extends StatelessWidget {
         ],
       ),
       body: Stack(
+        //ToDo: add sliver app bar or scfroll listener to remove app bar in scroll down
         children: [
           Container(
             height: MediaQuery.of(context).size.height * 0.2,
             color: primaryColor,
           ),
-          ListView(
-            physics: const BouncingScrollPhysics(),
+          Column(
             children: [
               SearchField(StringsApp.searchTheProductyouWant()),
-              const PrimaryOffertsCards(),
-              const CategoriesHorizontal(),
-              const AuthCard(),
-              const TitleSection('Te mereces todo esto'),
-              const ProductsGridView(),
-              const TitleSection('Novedades'),
-              const NewsSection(
-                'It is a long established fact that a reader will be distracted by',
-                'assets/news.png',
-                color: whiteColor,
-              ),
-              const NewsSection(
-                'It is a long established fact that a reader will be distracted by',
-                'assets/news.png',
-                color: textColor,
-                backgroundColor: whiteColor,
-              ),
-              const TitleSection('Categorías'),
-              const CategoriesGridView(),
+              Expanded(
+                child: ListView(
+                  physics: const BouncingScrollPhysics(),
+                  children: [
+                    const PrimaryOffertsCards(),
+                    const CategoriesHorizontal(),
+                    const AuthCard(),
+                    const TitleSection('Te mereces todo esto'),
+                    const ProductsGridView(),
+                    const TitleSection('Novedades'),
+                    const NewsSection(
+                      'It is a long established fact that a reader will be distracted by',
+                      'assets/news.png',
+                      color: whiteColor,
+                    ),
+                    const NewsSection(
+                      'It is a long established fact that a reader will be distracted by',
+                      'assets/news.png',
+                      color: textColor,
+                      backgroundColor: whiteColor,
+                    ),
+                    const TitleSection('Categorías'),
+                    const CategoriesGridView(),
+                  ],
+
+                ),
+              )
             ],
           ),
         ],
