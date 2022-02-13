@@ -9,15 +9,17 @@ class ThemeButton extends StatelessWidget {
     this.title, {
     this.textColor = whiteColor,
     this.color = blueColor,
+    this.margin = const EdgeInsets.symmetric(horizontal: MARGIN_SIZE_DEFAULT, vertical: MARGIN_SIZE_DEFAULT),
   });
   final String title;
   final Color textColor;
   final Color color;
+  final EdgeInsets margin;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: MARGIN_SIZE_DEFAULT, vertical: MARGIN_SIZE_DEFAULT),
+      margin: margin,
       child: Material(
         borderRadius: BorderRadius.circular(RADIUS_SIZE_SMALL),
         color: color,
@@ -27,7 +29,7 @@ class ThemeButton extends StatelessWidget {
           child: Text(
             title,
             style: TextStyleApp.b1().copyWith(
-              color: whiteColor,
+              color: textColor,
             ),
             textAlign: TextAlign.center,
           )
