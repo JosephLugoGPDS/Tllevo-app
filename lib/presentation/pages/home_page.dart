@@ -56,7 +56,13 @@ class HomePage extends StatelessWidget {
                 'It is a long established fact that a reader will be distracted by',
                 'assets/news.png',
                 color: whiteColor,
-              )
+              ),
+              const NewsSection(
+                'It is a long established fact that a reader will be distracted by',
+                'assets/news.png',
+                color: textColor,
+                backgroundColor: whiteColor,
+              ),
             ],
           ),
         ],
