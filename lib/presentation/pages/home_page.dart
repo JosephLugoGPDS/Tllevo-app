@@ -5,6 +5,7 @@ import 'package:tllevo/core/theme/colors_app.dart';
 import 'package:tllevo/core/values/dimension.dart';
 import 'package:tllevo/core/values/strings_app.dart';
 import 'package:tllevo/presentation/pages/widgets/auth_card.dart';
+import 'package:tllevo/presentation/pages/widgets/categories_gridview.dart';
 import 'package:tllevo/presentation/pages/widgets/categories_horizontal.dart';
 import 'package:tllevo/presentation/pages/widgets/news_section.dart';
 import 'package:tllevo/presentation/pages/widgets/primary_offerts_cards.dart';
@@ -63,6 +64,8 @@ class HomePage extends StatelessWidget {
                 color: textColor,
                 backgroundColor: whiteColor,
               ),
+              const TitleSection('Categorías'),
+              const CategoriesGridView(),
             ],
           ),
         ],
